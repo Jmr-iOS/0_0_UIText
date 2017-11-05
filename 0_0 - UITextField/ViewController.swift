@@ -36,18 +36,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     //todo - add passing the delegate
-    func addTextField(view:UIView) {
+    func addTextField(_ view:UIView) {
         
-        sampleTextField = UITextField(frame: CGRectMake(20, 100, 300, 40));
+        sampleTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 300, height: 40));
         
         sampleTextField.placeholder = "Enter text here, bitches!";
-        sampleTextField.font = UIFont.systemFontOfSize(15);
-        sampleTextField.borderStyle = UITextBorderStyle.RoundedRect;
-        sampleTextField.autocorrectionType = UITextAutocorrectionType.No;
-        sampleTextField.keyboardType = UIKeyboardType.Default;
-        sampleTextField.returnKeyType = UIReturnKeyType.Done;
-        sampleTextField.clearButtonMode = UITextFieldViewMode.WhileEditing;
-        sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.Center;
+        sampleTextField.font = UIFont.systemFont(ofSize: 15);
+        sampleTextField.borderStyle = UITextBorderStyle.roundedRect;
+        sampleTextField.autocorrectionType = UITextAutocorrectionType.no;
+        sampleTextField.keyboardType = UIKeyboardType.default;
+        sampleTextField.returnKeyType = UIReturnKeyType.done;
+        sampleTextField.clearButtonMode = UITextFieldViewMode.whileEditing;
+        sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.center;
         sampleTextField.delegate = self;
         
         sampleTextField.translatesAutoresizingMaskIntoConstraints = true;
@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //**********************************************************************************************************************************//
 //                                                       UITextFieldDelegate                                                        //
 //**********************************************************************************************************************************//
-    func addDelegate(delegate : UITextFieldDelegate) {
+    func addDelegate(_ delegate : UITextFieldDelegate) {
     
         self.sampleTextField.delegate = self;                               /* be the delegate                                      */
         
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func textFieldShouldReturn(textField : UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField : UITextField) -> Bool {
         
         sampleTextField.resignFirstResponder();                             /* here is the action which dismisses keyboard          */
         
@@ -79,32 +79,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
 
-    func textFieldDidBeginEditing   (textField : UITextField) {
+    func textFieldDidBeginEditing   (_ textField : UITextField) {
         print("TextField did begin editing method called");
         return;
     }
     
-    func textFieldDidEndEditing     (textField : UITextField) {
+    func textFieldDidEndEditing     (_ textField : UITextField) {
         print("TextField did end editing method called");
         return;
     }
     
-    func textFieldShouldBeginEditing(textField : UITextField) -> Bool {
+    func textFieldShouldBeginEditing(_ textField : UITextField) -> Bool {
         print("TextField should begin editing method called");
         return true;
     }
     
-    func textFieldShouldClear(textField: UITextField) -> Bool {
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
         print("TextField should clear method called");
         return true;
     }
     
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         print("TextField should snd editing method called");
         return true;
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         print("While entering the characters this method gets called");
         return true;
     }

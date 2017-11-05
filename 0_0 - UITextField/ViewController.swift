@@ -13,7 +13,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
  
  
-    var sampleTextField : UITextField!;
+    @objc var sampleTextField : UITextField!;
     
     
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     //todo - add passing the delegate
-    func addTextField(_ view:UIView) {
+    @objc func addTextField(_ view:UIView) {
         
         sampleTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 300, height: 40));
         
@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //**********************************************************************************************************************************//
 //                                                       UITextFieldDelegate                                                        //
 //**********************************************************************************************************************************//
-    func addDelegate(_ delegate : UITextFieldDelegate) {
+    @objc func addDelegate(_ delegate : UITextFieldDelegate) {
     
         self.sampleTextField.delegate = self;                               /* be the delegate                                      */
         

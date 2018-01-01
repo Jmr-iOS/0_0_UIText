@@ -34,9 +34,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0F2AC611BF6E61E001F6A07"
-            BuildableName = "0_0 - UITextField.app"
-            BlueprintName = "0_0 - UITextField"
-            ReferencedContainer = "container:0_0 - UITextField.xcodeproj">
+            BuildableName = "0_0 - UIText.app"
+            BlueprintName = "0_0 - UIText"
+            ReferencedContainer = "container:0_0 - UIText.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,11 +58,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0F2AC611BF6E61E001F6A07"
-            BuildableName = "0_0 - UITextField.app"
-            BlueprintName = "0_0 - UITextField"
-            ReferencedContainer = "container:0_0 - UITextField.xcodeproj">
+            BuildableName = "0_0 - UIText.app"
+            BlueprintName = "0_0 - UIText"
+            ReferencedContainer = "container:0_0 - UIText.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

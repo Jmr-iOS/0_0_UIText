@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0F2AC661BF6E61E001F6A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2AC651BF6E61E001F6A07 /* AppDelegate.swift */; };
-		D0F2AC681BF6E61E001F6A07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2AC671BF6E61E001F6A07 /* ViewController.swift */; };
+		D0CB9CE91FFA9AFE007AA36D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CB9CE71FFA9AFE007AA36D /* ViewController.swift */; };
+		D0CB9CEA1FFA9AFE007AA36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CB9CE81FFA9AFE007AA36D /* AppDelegate.swift */; };
+		D0CB9CEC1FFA9B8C007AA36D /* Stdcomments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CB9CEB1FFA9B8C007AA36D /* Stdcomments.swift */; };
 		D0F2AC6D1BF6E61E001F6A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F2AC6C1BF6E61E001F6A07 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0F2AC621BF6E61E001F6A07 /* 0_0 - UITextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_0 - UITextField.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0F2AC651BF6E61E001F6A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0F2AC671BF6E61E001F6A07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0CB9CE71FFA9AFE007AA36D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		D0CB9CE81FFA9AFE007AA36D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		D0CB9CEB1FFA9B8C007AA36D /* Stdcomments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stdcomments.swift; sourceTree = "<group>"; };
+		D0F2AC621BF6E61E001F6A07 /* 0_0 - UIText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_0 - UIText.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F2AC6C1BF6E61E001F6A07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F2AC711BF6E61E001F6A07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -31,39 +33,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0D1D9EF1FFA9A91006742A4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2AC6C1BF6E61E001F6A07 /* Assets.xcassets */,
+				D0CB9CEB1FFA9B8C007AA36D /* Stdcomments.swift */,
+				D0F2AC711BF6E61E001F6A07 /* Info.plist */,
+				D0F2AC631BF6E61E001F6A07 /* Products */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		D0F2AC591BF6E61E001F6A07 = {
 			isa = PBXGroup;
 			children = (
-				D0F2AC641BF6E61E001F6A07 /* 0_0 - UITextField */,
-				D0F2AC631BF6E61E001F6A07 /* Products */,
+				D0D1D9EF1FFA9A91006742A4 /* Base */,
+				D0CB9CE81FFA9AFE007AA36D /* AppDelegate.swift */,
+				D0CB9CE71FFA9AFE007AA36D /* ViewController.swift */,
 			);
 			sourceTree = "<group>";
 		};
 		D0F2AC631BF6E61E001F6A07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0F2AC621BF6E61E001F6A07 /* 0_0 - UITextField.app */,
+				D0F2AC621BF6E61E001F6A07 /* 0_0 - UIText.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D0F2AC641BF6E61E001F6A07 /* 0_0 - UITextField */ = {
-			isa = PBXGroup;
-			children = (
-				D0F2AC651BF6E61E001F6A07 /* AppDelegate.swift */,
-				D0F2AC671BF6E61E001F6A07 /* ViewController.swift */,
-				D0F2AC6C1BF6E61E001F6A07 /* Assets.xcassets */,
-				D0F2AC711BF6E61E001F6A07 /* Info.plist */,
-			);
-			path = "0_0 - UITextField";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0F2AC611BF6E61E001F6A07 /* 0_0 - UITextField */ = {
+		D0F2AC611BF6E61E001F6A07 /* 0_0 - UIText */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0F2AC741BF6E61E001F6A07 /* Build configuration list for PBXNativeTarget "0_0 - UITextField" */;
+			buildConfigurationList = D0F2AC741BF6E61E001F6A07 /* Build configuration list for PBXNativeTarget "0_0 - UIText" */;
 			buildPhases = (
 				D0F2AC5E1BF6E61E001F6A07 /* Sources */,
 				D0F2AC5F1BF6E61E001F6A07 /* Frameworks */,
@@ -73,9 +76,9 @@
 			);
 			dependencies = (
 			);
-			name = "0_0 - UITextField";
+			name = "0_0 - UIText";
 			productName = "0_0 - UITextField";
-			productReference = D0F2AC621BF6E61E001F6A07 /* 0_0 - UITextField.app */;
+			productReference = D0F2AC621BF6E61E001F6A07 /* 0_0 - UIText.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D0F2AC5D1BF6E61E001F6A07 /* Build configuration list for PBXProject "0_0 - UITextField" */;
+			buildConfigurationList = D0F2AC5D1BF6E61E001F6A07 /* Build configuration list for PBXProject "0_0 - UIText" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -108,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0F2AC611BF6E61E001F6A07 /* 0_0 - UITextField */,
+				D0F2AC611BF6E61E001F6A07 /* 0_0 - UIText */,
 			);
 		};
 /* End PBXProject section */
@@ -129,8 +132,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F2AC681BF6E61E001F6A07 /* ViewController.swift in Sources */,
-				D0F2AC661BF6E61E001F6A07 /* AppDelegate.swift in Sources */,
+				D0CB9CEA1FFA9AFE007AA36D /* AppDelegate.swift in Sources */,
+				D0CB9CE91FFA9AFE007AA36D /* ViewController.swift in Sources */,
+				D0CB9CEC1FFA9B8C007AA36D /* Stdcomments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,9 +244,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HRCQBX7PVQ;
-				INFOPLIST_FILE = "0_0 - UITextField/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaostech.--1---UITextField";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaostech.0--1---UIText";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -253,9 +258,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HRCQBX7PVQ;
-				INFOPLIST_FILE = "0_0 - UITextField/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaostech.--1---UITextField";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaostech.0--1---UIText";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -264,7 +270,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D0F2AC5D1BF6E61E001F6A07 /* Build configuration list for PBXProject "0_0 - UITextField" */ = {
+		D0F2AC5D1BF6E61E001F6A07 /* Build configuration list for PBXProject "0_0 - UIText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0F2AC721BF6E61E001F6A07 /* Debug */,
@@ -273,7 +279,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0F2AC741BF6E61E001F6A07 /* Build configuration list for PBXNativeTarget "0_0 - UITextField" */ = {
+		D0F2AC741BF6E61E001F6A07 /* Build configuration list for PBXNativeTarget "0_0 - UIText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0F2AC751BF6E61E001F6A07 /* Debug */,

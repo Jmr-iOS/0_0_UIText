@@ -43,6 +43,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         addTextField(self.view);
         addTextView(self.view);
         
+        //Add labels
+        addLabels(self.view);
+        
         //Add response
         addDelegate(self);
         
@@ -59,8 +62,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
      *  @todo      add passing the delegate
      */
     /********************************************************************************************************************************/
-    
-    @objc func addTextField(_ view:UIView) {
+    func addTextField(_ view:UIView) {
         
         sampleTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 300, height: 40));
         
@@ -114,11 +116,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
         sampleTextView.isScrollEnabled = false;                                 /* user can scroll                                  */
         
         sampleTextView.translatesAutoresizingMaskIntoConstraints = true;
+        sampleTextView.backgroundColor = UIColor.purple;
+
+        //Add view
         view.addSubview(sampleTextView);
         
-        sampleTextView.backgroundColor = UIColor.purple;
-        
         print("ViewController.addTextView():  textview added to the view");
+        
+        return;
+    }
+    
+    
+    /********************************************************************************************************************************/
+    /** @fcn        addLabels(_ view:UIView)
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
+    func addLabels(_ view : UIView) {
+    
+        //TextField Label
+        let fieldLabel : UILabel = UILabel(frame: CGRect(x: 20, y: 65, width: 300, height: 40));
+        fieldLabel.font = self.boldItalic();
+        fieldLabel.text = "TextField";
+    
+        //TextView Label
+        let viewLabel : UILabel = UILabel(frame: CGRect(x: 20, y: 165, width: 300, height: 40));
+        viewLabel.font = self.applyTrait(font: viewLabel.font, newTrait: .traitBold);
+        viewLabel.text = "TextView";
+
+        //Add views
+        view.addSubview(fieldLabel);
+        view.addSubview(viewLabel);
         
         return;
     }
@@ -187,6 +216,49 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
         return;
+    }
+    
+    
+//**********************************************************************************************************************************//
+//                                                       UIFont Utilities                                                           //
+//**********************************************************************************************************************************//
+    //@ref  https://stackoverflow.com/questions/4713236/how-do-i-set-bold-and-italic-on-uilabel-of-iphone-ipad
+    func withTraits(traits:UIFontDescriptorSymbolicTraits...) -> UIFont {
+        let descriptor = self.fontDescriptor().withSymbolicTraits(UIFontDescriptorSymbolicTraits(traits));
+        return UIFont(descriptor: descriptor!, size: 0);
+    }
+    
+    func bold() -> UIFont {
+        return withTraits(traits: .traitBold);                              /* .SFUIText-Semibold                                   */
+    }
+
+    func italic() -> UIFont {
+        return withTraits(traits: .traitItalic);                            /* .SFUIText-Italic                                     */
+    }
+    
+    func boldItalic() -> UIFont {
+        return withTraits(traits: .traitBold, .traitItalic);                /* .SFUIText-SemiboldItalic                             */
+    }
+    
+    /*
+     .traitItalic
+     .traitBold
+     .traitExpanded
+     .traitCondensed
+     .traitMonoSpace
+     .traitVertical
+     .traitUIOptimized
+     .traitTightLeading
+     .traitLooseLeading
+     */
+    func applyTrait(font : UIFont, newTrait : UIFontDescriptorSymbolicTraits) -> UIFont {
+        font.fontDescriptor.withSymbolicTraits(newTrait);
+        return withTraits(traits: newTrait);
+    }
+    
+    func fontDescriptor() -> UIFontDescriptor {
+        let label : UILabel = UILabel();
+        return label.font.fontDescriptor;
     }
 }
 

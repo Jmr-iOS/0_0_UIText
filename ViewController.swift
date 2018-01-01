@@ -137,12 +137,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
         //TextField Label
         let fieldLabel : UILabel = UILabel(frame: CGRect(x: 20, y: 65, width: 300, height: 40));
-        fieldLabel.font = self.boldItalic();
+        fieldLabel.font = FontUtils.boldItalic();
         fieldLabel.text = "TextField";
     
         //TextView Label
         let viewLabel : UILabel = UILabel(frame: CGRect(x: 20, y: 165, width: 300, height: 40));
-        viewLabel.font = self.applyTrait(font: viewLabel.font, newTrait: .traitBold);
+        viewLabel.font = FontUtils.applyTrait(font: viewLabel.font, newTrait: .traitBold);
         viewLabel.text = "TextView";
 
         //Add views
@@ -216,49 +216,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
         return;
-    }
-    
-    
-//**********************************************************************************************************************************//
-//                                                       UIFont Utilities                                                           //
-//**********************************************************************************************************************************//
-    //@ref  https://stackoverflow.com/questions/4713236/how-do-i-set-bold-and-italic-on-uilabel-of-iphone-ipad
-    func withTraits(traits:UIFontDescriptorSymbolicTraits...) -> UIFont {
-        let descriptor = self.fontDescriptor().withSymbolicTraits(UIFontDescriptorSymbolicTraits(traits));
-        return UIFont(descriptor: descriptor!, size: 0);
-    }
-    
-    func bold() -> UIFont {
-        return withTraits(traits: .traitBold);                              /* .SFUIText-Semibold                                   */
-    }
-
-    func italic() -> UIFont {
-        return withTraits(traits: .traitItalic);                            /* .SFUIText-Italic                                     */
-    }
-    
-    func boldItalic() -> UIFont {
-        return withTraits(traits: .traitBold, .traitItalic);                /* .SFUIText-SemiboldItalic                             */
-    }
-    
-    /*
-     .traitItalic
-     .traitBold
-     .traitExpanded
-     .traitCondensed
-     .traitMonoSpace
-     .traitVertical
-     .traitUIOptimized
-     .traitTightLeading
-     .traitLooseLeading
-     */
-    func applyTrait(font : UIFont, newTrait : UIFontDescriptorSymbolicTraits) -> UIFont {
-        font.fontDescriptor.withSymbolicTraits(newTrait);
-        return withTraits(traits: newTrait);
-    }
-    
-    func fontDescriptor() -> UIFontDescriptor {
-        let label : UILabel = UILabel();
-        return label.font.fontDescriptor;
     }
 }
 

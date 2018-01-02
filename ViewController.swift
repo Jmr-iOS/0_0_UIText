@@ -6,14 +6,13 @@
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
  *  @created    11/05/17
- *  @last rev   1/1/18
+ *  @last rev   1/2/18
  *
  *  @section    Reference
  *      http://stackoverflow.com/questions/24710041/adding-uitextfield-on-uiview-programmatically-swift/32602425#32602425
  *
  *  @section    Opens
- *      Add italics & bold
- *      Push italics & bold to Lib
+ *      add vertical alignment
  *
  *  @section    Legal Disclaimer
  *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
@@ -121,6 +120,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         sampleTextView.translatesAutoresizingMaskIntoConstraints = true;
         sampleTextView.backgroundColor = UIColor.purple;
 
+        applyCorners(sampleTextView);
+        
         //Add view
         view.addSubview(sampleTextView);
         
@@ -152,6 +153,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(fieldLabel);
         view.addSubview(viewLabel);
         
+        print("ViewController.addLabels():    labels added to the view");
+        
+        return;
+    }
+
+    
+    /********************************************************************************************************************************/
+    /** @fcn        applyCorners(_ view : UIView)
+     *  @brief      apply rounded corners to a view
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
+    func applyCorners(_ view : UIView) {
+        
+        view.clipsToBounds      = true;                                          /* needed for corners                           */
+        view.layer.cornerRadius = 12;                                            /* apply rounded corners to view edges          */
+        
+        print("ViewController.applyCorners(): corners applied to the view");
+
         return;
     }
     

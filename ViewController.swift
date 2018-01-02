@@ -49,6 +49,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //Add response
         addDelegate(self);
         
+        //Split example
+        splitExample();
+        
         print("ViewController.viewDidLoad():  load complete");
         
         return;
@@ -148,6 +151,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //Add views
         view.addSubview(fieldLabel);
         view.addSubview(viewLabel);
+        
+        return;
+    }
+    
+    
+    /********************************************************************************************************************************/
+    /** @fcn        splitExample()
+     *  @brief      demonstration of how to split a string
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
+    func splitExample() {
+        let nameArr : [String] =  "firstField secondField thirdField".split{$0 == " "}.map(String.init);
+        
+        print("ViewController.splitExample:   \(nameArr[0]), \(nameArr[1]), \(nameArr[2])");
         
         return;
     }

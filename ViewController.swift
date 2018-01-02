@@ -66,20 +66,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
     /********************************************************************************************************************************/
     func addTextField(_ view:UIView) {
         
-        sampleTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 300, height: 40));
+        let fieldFrame = CGRect(x: 20, y: 100, width: 300, height: 40);
         
-        sampleTextField.placeholder = "Enter text here, bitches!";
-        sampleTextField.font = UIFont.systemFont(ofSize: 15);
-        sampleTextField.borderStyle = UITextBorderStyle.roundedRect;
-        sampleTextField.autocorrectionType = UITextAutocorrectionType.no;
-        sampleTextField.keyboardType = UIKeyboardType.default;
-        sampleTextField.returnKeyType = UIReturnKeyType.done;
-        sampleTextField.clearButtonMode = UITextFieldViewMode.whileEditing;
-        sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.center;
-        sampleTextField.delegate = self;
+        //Init
+        sampleTextField = UITextField(frame: fieldFrame);                                       /* init new field                   */
         
-        sampleTextField.translatesAutoresizingMaskIntoConstraints = true;
+        //Setup
+        sampleTextField.font = UIFont.systemFont(ofSize: 15);                                   /* set font                         */
+        sampleTextField.borderStyle = UITextBorderStyle.roundedRect;                            /* apply rounded edges to frame     */
+        sampleTextField.autocorrectionType = UITextAutocorrectionType.no;                       /* disable auto-correct             */
+        sampleTextField.keyboardType = UIKeyboardType.default;                                  /* select normal default keyboard   */
+        sampleTextField.returnKeyType = UIReturnKeyType.done;                                   /* set return key type              */
+        sampleTextField.clearButtonMode = UITextFieldViewMode.whileEditing;                     /* only show 'x' when editing       */
+        sampleTextField.textAlignment = .left;                                                  /* set alignment of text            */
+        sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.center;    /* apply vertical alignment         */
+        sampleTextField.translatesAutoresizingMaskIntoConstraints = true;                       /* allow constraints                */
+        sampleTextField.delegate = self;                                                        /* set delegate for response        */
         
+        //Text
+        sampleTextField.text = nil;                                                             /* left empty for placeholder       */
+        sampleTextField.placeholder = "Enter text here, bitches!";                              /* text shown when empty            */
+
+
+        //Add to view
         view.addSubview(sampleTextField);
         
         print("ViewController.addTextField(): textfield added to the view");
@@ -95,34 +104,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
      */
     /********************************************************************************************************************************/
     func addTextView(_ view:UIView) {
+
+        let viewFrame = CGRect(x: 20, y: 200, width: 290, height: 300);
         
-        let sampleTextView = UITextView(frame: CGRect(x: 20, y: 200, width: 290, height: 300));
-        
-        sampleTextView.textAlignment = .left;
-        
-        sampleTextView.backgroundColor = UIColor.purple;
+        //Init
+        let sampleTextView = UITextView(frame: viewFrame);                                      /* init new field                   */
         
         
-        sampleTextView.text = "Enter the TextView text here \n many, many lines of it!";
+        //Setup
+        sampleTextView.font = UIFont.systemFont(ofSize: 11);                                    /* set font                         */
+        sampleTextView.keyboardType  = UIKeyboardType.default;                                  /* select normal default keyboard   */
+        sampleTextView.returnKeyType = UIReturnKeyType.done;                                    /* set return key type              */
+        sampleTextView.textAlignment = .left;                                                   /* set alignment of text            */
+        sampleTextView.translatesAutoresizingMaskIntoConstraints = true;                        /* allow constraints                */
+        sampleTextView.backgroundColor = UIColor.purple;                                        /* set background color of view     */
+        sampleTextView.isEditable    = false;                                                   /* user text editing                */
+        sampleTextView.isSelectable  = false;                                                   /* user can select                  */
+        sampleTextView.isScrollEnabled = false;                                                 /* user can scroll                  */
         
-        for i in 0...50 {
+        //Text
+        sampleTextView.text = "Enter the TextView text here \n many, many lines of it!";        /* set text value                   */
+        for i in 0...15 {
             sampleTextView.text = sampleTextView.text +  String("line[\(i)] - And then there is a lot of text next to it...! :)\n");
         }
-        
-        sampleTextView.font = UIFont.systemFont(ofSize: 11);
-        sampleTextView.autocorrectionType = UITextAutocorrectionType.no;
-        sampleTextView.keyboardType  = UIKeyboardType.default;
-        sampleTextView.returnKeyType = UIReturnKeyType.done;
-        sampleTextView.isEditable    = false;                                   /* user text editing                                */
-        sampleTextView.isSelectable  = false;                                   /* user can select                                  */
-        sampleTextView.isScrollEnabled = false;                                 /* user can scroll                                  */
-        
-        sampleTextView.translatesAutoresizingMaskIntoConstraints = true;
-        sampleTextView.backgroundColor = UIColor.purple;
 
+        //Customize view
         applyCorners(sampleTextView);
         
-        //Add view
+        //Add to view
         view.addSubview(sampleTextView);
         
         print("ViewController.addTextView():  textview added to the view");
@@ -220,7 +229,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing     (_ textField : UITextField) {
-        print("ViewController.DidEnd():  2TextField did end editing method called");
+        print("ViewController.DidEnd():        textField did end editing method called");
         return;
     }
     
@@ -230,17 +239,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        print("ViewController.ShouldClear():  4TextField should clear method called");
+        print("ViewController.ShouldClear():  textField should clear method called");
         return true;
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        print("ViewController.ShouldEnd():  5TextField should end editing method called");
+        print("ViewController.ShouldEnd():    textField should end editing method called");
         return true;
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("ViewController.textField():  text was entered (\(string))");
+        print("ViewController.textField():    text was entered (\(string))");
         return true;
     }
     

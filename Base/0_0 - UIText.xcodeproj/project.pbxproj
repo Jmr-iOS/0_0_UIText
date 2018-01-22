@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		D092DA581FFAB0D5001B9A3B /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092DA571FFAB0D4001B9A3B /* FontUtils.swift */; };
+		D0B600B62016421500D8376C /* Empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B600B32016421500D8376C /* Empty.storyboard */; };
+		D0B600B72016421500D8376C /* NewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B600B42016421500D8376C /* NewClass.swift */; };
+		D0B600B82016421500D8376C /* Stdcomments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B600B52016421500D8376C /* Stdcomments.swift */; };
+		D0B600BC2016426A00D8376C /* DataBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B600BA2016426A00D8376C /* DataBackup.swift */; };
+		D0B600BD2016426A00D8376C /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B600BB2016426A00D8376C /* Globals.swift */; };
 		D0CB9CE91FFA9AFE007AA36D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CB9CE71FFA9AFE007AA36D /* ViewController.swift */; };
 		D0CB9CEA1FFA9AFE007AA36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CB9CE81FFA9AFE007AA36D /* AppDelegate.swift */; };
-		D0CB9CEC1FFA9B8C007AA36D /* Stdcomments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CB9CEB1FFA9B8C007AA36D /* Stdcomments.swift */; };
 		D0F2AC6D1BF6E61E001F6A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F2AC6C1BF6E61E001F6A07 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D092DA571FFAB0D4001B9A3B /* FontUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontUtils.swift; path = "../../../../../Ref/Libraries/Programmatic UI/FontUtils.swift"; sourceTree = "<group>"; };
+		D0B600B32016421500D8376C /* Empty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Empty.storyboard; path = ../../../../../Ref/iOS/Base/Empty.storyboard; sourceTree = "<group>"; };
+		D0B600B42016421500D8376C /* NewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewClass.swift; path = ../../../../../Ref/iOS/Base/NewClass.swift; sourceTree = "<group>"; };
+		D0B600B52016421500D8376C /* Stdcomments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stdcomments.swift; path = ../../../../../Ref/iOS/Base/Stdcomments.swift; sourceTree = "<group>"; };
+		D0B600BA2016426A00D8376C /* DataBackup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataBackup.swift; path = ../Data/DataBackup.swift; sourceTree = "<group>"; };
+		D0B600BB2016426A00D8376C /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = ../Data/Globals.swift; sourceTree = "<group>"; };
 		D0CB9CE71FFA9AFE007AA36D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		D0CB9CE81FFA9AFE007AA36D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
-		D0CB9CEB1FFA9B8C007AA36D /* Stdcomments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stdcomments.swift; sourceTree = "<group>"; };
 		D0F2AC621BF6E61E001F6A07 /* 0_0 - UIText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_0 - UIText.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F2AC6C1BF6E61E001F6A07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F2AC711BF6E61E001F6A07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,12 +51,23 @@
 			name = Lib;
 			sourceTree = "<group>";
 		};
+		D0B600B92016425F00D8376C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D0B600BA2016426A00D8376C /* DataBackup.swift */,
+				D0B600BB2016426A00D8376C /* Globals.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		D0D1D9EF1FFA9A91006742A4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				D0F2AC6C1BF6E61E001F6A07 /* Assets.xcassets */,
-				D0CB9CEB1FFA9B8C007AA36D /* Stdcomments.swift */,
 				D0F2AC711BF6E61E001F6A07 /* Info.plist */,
+				D0B600B32016421500D8376C /* Empty.storyboard */,
+				D0B600B42016421500D8376C /* NewClass.swift */,
+				D0B600B52016421500D8376C /* Stdcomments.swift */,
 				D0F2AC631BF6E61E001F6A07 /* Products */,
 			);
 			name = Base;
@@ -59,6 +78,7 @@
 			children = (
 				D0D1D9EF1FFA9A91006742A4 /* Base */,
 				D092DA561FFAB0C6001B9A3B /* Lib */,
+				D0B600B92016425F00D8376C /* Data */,
 				D0CB9CE81FFA9AFE007AA36D /* AppDelegate.swift */,
 				D0CB9CE71FFA9AFE007AA36D /* ViewController.swift */,
 			);
@@ -132,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B600B62016421500D8376C /* Empty.storyboard in Resources */,
 				D0F2AC6D1BF6E61E001F6A07 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,10 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B600B82016421500D8376C /* Stdcomments.swift in Sources */,
+				D0B600BC2016426A00D8376C /* DataBackup.swift in Sources */,
 				D0CB9CEA1FFA9AFE007AA36D /* AppDelegate.swift in Sources */,
+				D0B600B72016421500D8376C /* NewClass.swift in Sources */,
 				D0CB9CE91FFA9AFE007AA36D /* ViewController.swift in Sources */,
+				D0B600BD2016426A00D8376C /* Globals.swift in Sources */,
 				D092DA581FFAB0D5001B9A3B /* FontUtils.swift in Sources */,
-				D0CB9CEC1FFA9B8C007AA36D /* Stdcomments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

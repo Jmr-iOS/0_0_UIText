@@ -6,7 +6,7 @@
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
  *  @created    11/05/17
- *  @last rev   1/2/18
+ *  @last rev   1/22/18
  *
  *  @section    Reference
  *      http://stackoverflow.com/questions/24710041/adding-uitextfield-on-uiview-programmatically-swift/32602425#32602425
@@ -45,6 +45,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //Add labels
         addLabels(self.view);
         
+        //Add orientation examples
+        addVerticalText(self.view);
+        addRotatedText(self.view);
+        
         //Add response
         addDelegate(self);
         
@@ -55,6 +59,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         return;
     }
+    
+    
+    /********************************************************************************************************************************/
+    /** @fcn        addVerticalText(_ view : UIView)
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
+    func addVerticalText(_ view : UIView) {
+        print("todo");
+        return;
+    }
+
+    
+    /********************************************************************************************************************************/
+    /** @fcn        addRotatedText(_ view : UIView)
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
+    func addRotatedText(_ view : UIView) {
+        print("todo");
+        return;
+    };
     
     
     /********************************************************************************************************************************/
@@ -150,12 +178,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
         //TextField Label
         let fieldLabel : UILabel = UILabel(frame: CGRect(x: 20, y: 65, width: 300, height: 40));
-        fieldLabel.font = FontUtils.boldItalic();
+        fieldLabel.font = FontUtils.updateFont(fieldLabel.font, [.bold, .italic])       /* set to bold-italic                       */
         fieldLabel.text = "TextField";
     
         //TextView Label
         let viewLabel : UILabel = UILabel(frame: CGRect(x: 20, y: 165, width: 300, height: 40));
-        viewLabel.font = FontUtils.applyTrait(font: viewLabel.font, newTrait: .traitBold);
+        viewLabel.font = FontUtils.updateFont(viewLabel.font, [.bold]);
         viewLabel.text = "TextView";
 
         //Add views
